@@ -71,14 +71,16 @@ async function fetchGoogleSheetData(sheetName) {
       Papa.parse(text, {
         header: true,
         complete: (results) => {
+          console.log('구글시트 원본 데이터:', results.data);
           const data = results.data
-            .filter(row => row['중국어'] && row['뜻'] && row['병음']) // 빈 행 제거
+            .filter(row => row['중국어'] && row['뜻'] && row['병음'])
             .map(row => ({
               chinese: row['중국어'],
               korean: row['뜻'],
               pinyin: row['병음'],
               level: row['분류'] || '1'
             }));
+          console.log('파싱된 데이터:', data);
           resolve(data);
         }
       });
