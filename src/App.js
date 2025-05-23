@@ -449,7 +449,6 @@ function SentenceLevelPage({ sentences }) {
 
 function WordLevelPage({ words }) {
   const [selectedLevel, setSelectedLevel] = useState(null);
-  // 단계별 단어 필터링 (단계 컬럼이 없으면 1단계로 간주)
   const filtered = selectedLevel
     ? words.filter(w => (Number(w.level) || Number(w['분류']) || 1) === selectedLevel)
     : [];
