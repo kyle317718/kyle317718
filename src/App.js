@@ -6,7 +6,7 @@ const DEEPSEEK_API_KEY = "sk-b59e1e44161c4021a1bb91c149294fbb";
 const DS_API_URL = "https://api.deepseek.com/v1/chat/completions";
 
 // Google Sheets API 설정
-const SHEET_ID = 'YOUR_SPREADSHEET_ID'; // 실제 스프레드시트 ID로 교체 예정
+const SHEET_ID = '1US8AATADOtfyaLfDJtYpgvHtRvorcKUxHOZnvyjBxts';
 const WORDS_SHEET = 'Words'; // 단어 시트 이름
 const SENTENCES_SHEET = 'Sentences'; // 문장 시트 이름
 
